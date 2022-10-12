@@ -1,0 +1,103 @@
+<input type="button" style="float: left; margin: 10px" value="+" id="btnLimpiar" onclick="limpiarCasa()" />
+<center>
+<h3 id="tituloCasa">Registrar Casa</h3>
+<table style="margin: auto; width: 100%; padding: 20px">
+	<tr style="width: 100%">
+		<td style="width: 30%">Descripcion:</td><td colspan="2" style="width: 70%"><textarea id="descripcion" rows = "2" style="width:100%"></textarea></td>
+	</tr>
+	<tr>
+		<td>Detalle:</td><td colspan="2"><textarea id="detalle" rows = "4" style="width:100%"></textarea></td>
+	</tr>
+	<tr>
+		<td>Moneda:</td>
+		<td>
+			<select id="moneda">
+				<option value="1">Bolivianos</option>
+				<option value="2">D&oacute;lares</option>
+				<option value="3">Euros</option>
+			</select>
+		</td>
+		<td><input type="button" id="btnVerFotos" value="Ver Fotos"/></td>
+	</tr>
+	<tr>
+		<td>Precio Venta:</td><td><input type="checkbox" id="chVenta"/>&nbsp;<input type="text" id="precioVenta" style="display: none;text-align: right;" disabled/></td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td>Precio Alquiler:</td><td><input type="checkbox" id="chAlquiler"/>&nbsp;<input type="text" id="precioAlquiler" style="display: none; text-align: right;" disabled/></td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td>Precio Anticretico:</td><td><input type="checkbox" id="chAnticretico"/>&nbsp;<input  type="text" id="precioAnticretico" style="display: none; text-align: right;" disabled /></td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td>Superficie Total:</td><td><input type="text" id="superficie" />
+			<select id="umSupT">
+				<option value="1">m2</option>
+				<option value="2">Ha</option>
+				<option value="3">Km2</option>
+			</select>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td>Superficie Construida:</td><td><input  type="text"  id="superficieC" />
+			<select id="umSupC">
+				<option value="1">m2</option>
+				<option value="2">Ha</option>
+				<option value="3">Km2</option>
+			</select>
+		</td>		
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td>Habitaciones:</td><td><input  type="text"  id="cuartos" class="spinner"/></td>
+	</tr>
+	<tr>
+		<td>Baños:</td><td><input  type="text"  id="banos" class="spinner"/></td>
+	</tr>
+	<tr>
+		<td>Pisos:</td><td><input  type="text" id="pisos" class="spinner"/></td>
+	</tr>
+	<tr>
+		<td>Direccion:</td><td colspan="2"><textarea id="direccion" rows = "2" style="width:100%"></textarea></td>
+	</tr>
+	<tr>
+		<td>Ciudad:</td><td><input  type="text" id="zona" /></td>
+	</tr>
+	<tr>
+		<td>Barrio:</td><td><input type="text" id="barrio" /></td>
+	</tr>
+	<tr>
+		<td>Provincia:</td><td><input type="text" id="provincia" /></td>
+	</tr>
+	<tr>
+		<td>Ubicacion GPS:</td><td colspan="2" style="text-align: center"><input type="button" id="btnMapa" value="Ver mapa" style="margin-left: 20px" /></td>
+	</tr>
+	<tr>
+		<td class="tooltip" ><label title="Fecha de inicio de la propuesta">Fecha inicial:</label></td><td colspan="2"><input type="text"  class="datepicker" id="fechaIni"/>
+		</td>
+	</tr>
+	<tr>
+		<td class="tooltip"><label title="Fecha de finalizacion de la propuesta">Fecha final:</label></td><td colspan="2"><input  type="text" class="datepicker" id="fechaFin"/>
+		</td>
+	</tr>
+	<tr>
+		<td>Nombre Contacto:</td><td colspan="2"><input  type="text" id="nombre" style="width:100%" /></td>
+	</tr>
+	
+	<tr>
+		<td>Telefono Contacto:</td><td><input type="text"  id="telefono" /></td>
+	</tr>
+</table>
+	<div style="text-align: right; margin: 10px">
+		<input type="button" value="Eliminar" id="btnEliminar" style="float:left; display:none"/>
+		<input type="button" value="Guardar" id="btnGuardar"/>
+	</div>
+</center>

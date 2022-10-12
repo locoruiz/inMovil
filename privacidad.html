@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>InM&oacute;vil</title>
+        <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <script src="../jquery-3.0.0.js"></script>
+        <link rel="stylesheet" href="../estilo/principal.css"/>
+        <style type="text/css">
+        .cont{
+            border-radius: 10px;
+            background-color: rgb(250, 250, 250);
+            box-shadow: 3px 3px 3px grey;
+            width: 600px;
+            margin: auto;
+            padding: 20px;
+			text-align: left;
+        }
+        </style>
+    </head>
+<body style="text-align:center;">
+<img src="img/logo.jpg" width="100px" height="100px" alt="" style="float: left">
+        <div class="cont">
+          <h1>Le damos la bienvenida a la Política de Privacidad y T&eacute;rminos y Condiciones de InM&oacute;vil		  </h1>
+          <p>Esta Política de privacidad está destinada a ayudarlo a entender qué datos recopilamos, por qué los recopilamos y qué hacemos con ellos. Esto es importante; esperamos que se tome su tiempo para leerlo con cuidado.</p>
+          <h1>T&eacute;rminos y Condiciones</h1>
+          <h2>Sobre la Aplicaci&oacuten</h2>
+          <p>InM&oacute;vil es un aplicación gratuita para celulares Android, únicamente para el uso personal y no comercial de quien cuente con ella.</p>
+          <p>En la misma podrá encontrar bienes e inmuebles a la venta, alquiler y anticrético, contenido de la aplicación, como imágenes, direcciones, teléfonos y demás datos de sus propietarios.</p>
+          <p>La aplicación sólo ofrece el serviciode nexo entre compradores y vendedores. Al momento de llegar a un acuerdo y venta a ejecutarse, la empresa no se responsabiliza de la adquisición.</p>
+	      <h1>Política de Privacidad		  </h1>
+	      
+		  <h2 id="infosecurity">Seguridad de la información</h2>
+		  <p>Nos esforzamos en proteger a InM&oacute;vil y nuestros usuarios del acceso no autorizado o cualquier modificación, divulgación o destrucción no autorizada de la información que poseemos. En particular:</p>
+		  <ul>
+		    <li>Encriptamos muchos de nuestros servicios <a href="https://support.google.com/websearch/answer/173733?hl=es-419">usando SSL</a>.</li>
+		    <li>Revisamos nuestras prácticas de almacenamiento y procesamiento de información, incluidas nuestras medidas de seguridad física, para protegernos frente al acceso no autorizado a los sistemas.</li>
+		    <li>Restringimos el acceso a la información personal a los empleados, contratistas y agentes de InM&oacute;vil que necesiten conocer tal información para procesarla por nosotros, y que estén sujetos a estrictas obligaciones contractuales de confidencialidad y puedan ser sancionados o despedidos si no cumplen con estas obligaciones.</li>
+	      </ul>
+		  <p>Mantenemos la seguridad y la privacidad de su información personal.</p>
+</div>
+
+
+<script type="text/javascript">
+
+        function entrar(){
+            var usu = document.getElementById("txtUsuario");
+            var pass = document.getElementById("txtPassword");
+            $.post("login.php", 
+                {
+                    usuario:usu.value,
+                    password:pass.value
+                }, 
+                function(data, status){
+                    if (status == "success") {
+                        data = JSON.parse(data);
+                        if(data.success == 1){
+                            window.location.replace("main.php");
+                        }else{
+                            usu.value="";
+                            pass.value="";
+                            usu.focus();
+                            alert(data.mensaje);
+                        }
+                    };
+                });
+        }
+        </script>
+</body>
+</html>

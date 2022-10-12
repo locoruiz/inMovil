@@ -1,0 +1,110 @@
+<script type="text/javascript" src="./js/validaciones.js" ></script>
+<input type="button" style="float: left; margin: 10px" value="+" id="btnLimpiar" onclick="limpiarAuto()" />
+<center>
+<h3>Registrar Vehiculo</h3>
+<table style="margin: auto; width: 100%; padding: 20px">
+	<tr style="width: 100%">
+		<td style="width: 30%">Tipo:</td><td colspan="2" style="width: 70%">
+			<select id="tipo"  style="width:100%" maxlength="50">
+				<option value = "1">Automóviles</option>
+				<option value = "2">Motocicletas</option>
+			</select>
+		</td>
+	</tr>
+	<tr style="width: 100%">
+		<td style="width: 30%">Descripcion:</td><td colspan="2" style="width: 70%"><textarea id="descripcion" rows = "2" style="width:100%" maxlength="50"></textarea></td>
+	</tr>
+	<tr>
+		<td>Detalle:</td><td colspan="2"><textarea id="detalle" rows = "4" style="width:100%" maxlength="500"></textarea></td>
+	</tr>
+	
+	<tr>
+		<td>Precio Venta:</td><td><input type="text" id="precioVenta" style="text-align: right;" onFocus="seleccionar(this);" onKeyPress="return validar_decimales(event, 14, 2);" onBlur="this.value = number_format(this.value, 2)" onPaste="paste_decimales(event, 14, 2);"/>
+			<select id="moneda">
+				<option value="1">Bolivianos</option>
+				<option value="2">D&oacute;lares</option>
+				<option value="3">Euros</option>
+			</select></td>
+		<td><input type="button" id="btnVerFotos" value="Ver Fotos"/></td>
+	</tr>
+	<tr>
+		<td>Marca:</td><td colspan="2"><input type="text" id="marca" style="width:100%" maxlength="50"></td>
+	</tr>
+	<tr>
+		<td>Modelo:</td><td colspan="2"><input type="text" id="modelo" style="width:100%" maxlength="50"></td>
+	</tr>
+	<tr>
+		<td>Año:</td><td colspan="2"><input id="ano" style="width:100%" maxlength="4" type="number" onKeyPress="return validar_decimales(event, 4, 0);" onBlur="this.value = number_format(this.value, 0)" onPaste="paste_decimales(event, 4, 0);"></td>
+	</tr>
+	<tr>
+		<td>Color:</td><td colspan="2"><input id="color" style="width:100%" maxlength="11" type="text"></td>
+	</tr>
+	<tr>
+		<td>Cilindrada:</td><td colspan="2"><input id="cilindrada" style="width:100%" maxlength="5" type="number" onKeyPress="return validar_decimales(event, 4, 0);" onBlur="this.value = number_format(this.value, 0)" onPaste="paste_decimales(event, 4, 0);">
+			<select id="umCilT">
+				<option value="1">C3</option>
+				<option value="2">CC</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Puertas:</td><td colspan="2"><input id="puertas" style="width:100%" class="spinner" maxlength="2" type="number" onKeyPress="return validar_decimales(event, 2, 0);" onBlur="this.value = number_format(this.value, 0)" onPaste="paste_decimales(event, 2, 0);"></td>
+	</tr>
+	
+	<tr>
+		<td>Caja:</td><td colspan="2">
+			<select id="caja">
+				<option value="1">Manual</option>
+				<option value="2">Automática</option>
+				<option value="3">Secuencial</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Combustible:</td><td colspan="2">
+			<select id="combustible">
+				<option value="1">Gasolina</option>
+				<option value="3">Gasolina - Gas</option>
+				<option value="2">Diesel</option>
+				<option value="4">Diesel - Gas</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Kilometraje:</td><td colspan="2"><input id="kilometraje" type="text" style="text-align: right;" onFocus="seleccionar(this);" onKeyPress="return validar_decimales(event, 11, 0);" onBlur="this.value = number_format(this.value, 0)" onPaste="paste_decimales(event, 11, 0);"/>Km. (Por favor convertir si esta en millas)</td>
+	</tr>
+	
+	<tr>
+		<td>Traccion:</td><td colspan="2">
+			<select id="traccion">
+				<option value="Trasera">Trasera</option>
+				<option value="Delantera">Delantera</option>
+				<option value="Doble">Doble</option>
+			</select>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="tooltip" ><label title="Fecha de inicio de la propuesta">Fecha inicial:</label></td><td colspan="2"><input type="text"  class="datepicker" id="fechaIni" maxlength="10"/>
+		</td>
+	</tr>
+	<tr>
+		<td class="tooltip"><label title="Fecha de finalizacion de la propuesta">Fecha final:</label></td><td colspan="2"><input  type="text" class="datepicker" id="fechaFin" maxlength="10"/>
+		</td>
+	</tr>
+	<tr>
+		<td>Nombre Contacto:</td><td colspan="2"><input  type="text" id="nombre" style="width:100%" maxlength="50"/></td>
+	</tr>
+	
+	<tr>
+		<td>Telefono Contacto:</td><td><input type="text"  id="telefono" maxlength="20"/></td>
+	</tr>
+	<tr>
+		<td>Telefono Alternativo:</td><td><input type="text"  id="telefono2" maxlength="20"/></td>
+	</tr>
+</table>
+	<div style="text-align: right; margin: 10px">
+		<input type="button" value="Eliminar" id="btnEliminar" style="float:left; display:none"/>
+		<input type="button" value="Guardar" id="btnGuardar"/>
+	</div>
+</center>
