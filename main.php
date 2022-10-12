@@ -697,7 +697,7 @@
 			<div id="loader" class="loader"></div>
 		</div>
 	<script async defer
-    		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcRfdMqAF671kouFr-y2e4vEIuEk4RqX0&callback=initMap">
+    		src="https://maps.googleapis.com/maps/api/js?key=YourKEY&callback=initMap">
     </script>
 </body>
 </html>
